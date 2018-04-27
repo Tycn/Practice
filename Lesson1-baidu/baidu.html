@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下 你就知道</title>
+    <style type="text/css">
+#header {
+        margin-top: 24px;
+        font-size: 13px;
+        font-style: width: 100%;
+        text-align: right;
+        margin-bottom: 150px;
+    }
+    
+    #BaiduLogo_Input {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+    }
+    
+    #footer {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header_black {
+        margin-left: 15px;
+        font-weight: bold;
+        color: black;
+    }
+    
+    .header_normal {
+        color: black;
+        margin-left: 8px;
+    }
+    
+    .header_moreproduct {
+        background: #3385FF;
+        padding: 5px;
+        margin-left: 10px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    #BaiduLogo_Input {
+        width: 100%;
+       
+        text-align:
+    }
+    
+    #sumbit_result {
+        font-size: 15px;
+        background: #3385ff;
+		border-bottom: 1px solid #2d78f4;
+        padding: 5px;
+        margin-left: -9px;
+        margin-top: 2px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border: 0px;
+        padding-top: 6px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+	.search{
+		width: 540px;
+		height: 36px;
+		position: relative;
+	}
+    #input_result {
+        width: 540px;
+        height: 36px;
+    }
+    .soutu-btn{
+		z-index:1;
+		position:absolute;
+		right:10px;
+		top:5px;
+		height:16px;
+		width:18px;
+		background:#fff url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png) no-repeat;
+		cursor:pointer
+	}
+	#footer{
+		margin-top:25%;
+	}
+	.qrcodeCon{
+		text-align: center;
+		width: 100%;
+	}
+	.qrcode-text{
+		font-size:12px;
+		color: #999;
+		line-height: 23px;
+		margin-top:-15px;
+
+	}
+	
+    #footer01 {
+        font: 12px arial;
+        font-size: 10px;
+		color: #999;
+    }
+    
+    #footer02 {
+        font: 12px arial; 
+        margin-top: 5px;
+        font-size: 10px;
+        color: #999;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- header开始 -->
+    <div id="header">
+        <p></p>
+        <a href="http://news.baidu.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">新闻</a>
+        <a href="http://www.hao123.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">hao123</a>
+        <a href="http://map.baidu.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">地图</a>
+        <a href="http://v.baidu.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">视频</a>
+        <a href="http://tieba.baidu.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">贴吧</a>
+		<a href="http://tieba.baidu.com/" target="_blank" class="header_black" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">学术</a>
+        <a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" class="header_normal" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">登录</a>
+        <a href="http://www.baidu.com/gaoji/preferences.html" class="header_normal" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#000000'">设置</a>
+        <a href="" style="text-decoration:none"><span class="header_moreproduct" >更多产品</span></a>
+    </div>
+    <!-- header结束 -->
+
+    <!-- BaiduLogo_Input开始 -->
+    <div id="BaiduLogo_Input">
+        <img alt="BaiduLogo" title="百度" src="https://www.baidu.com/img/bdlogo.png" width="270px" height="129">
+		
+        <form id="input_center">
+			<span class="search">
+				<input type="search" name="Search_Input" id="input_result" />
+				<span class="soutu-btn"></span>
+			</span>
+            <input type="submit" value="百度一下" id="sumbit_result" autofocus/>
+        </form>
+		</div>
+    </div>
+    <!-- BaiduLogo_Input结束 -->
+
+    <!-- footer开始 -->
+    <div id="footer">
+		<div class="qrcodeCon">
+			<div class="qrcode-item qrcode-item-1">
+				<img alt="qrcode-img" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png">
+				<div class="qrcode-text">
+					<p><b>百度</b></p>
+				</div>
+			</div>
+		</div>
+        <div id="footer01">
+            <a href="https://www.baidu.com/cache/sethelp/help.html" style="color:#999;margin-left:15px"" target="_blank">把百度设为主页</a> &nbsp;
+            <a href="http://home.baidu.com/" style="color:#999;margin-left:15px"" target="_blank">关于百度</a> &nbsp;
+            <a href="http://ir.baidu.com/" style="color:#999;margin-left:15px"" target="_blank">About Baidu</a>
+			<a href="http://ir.baidu.com/" style="color:#999;margin-left:15px"" target="_blank">百度推广</a>
+        </div>
+        <div id="footer02"><span>©2018 Baidu</span>
+            <a href="http://www.baidu.com/duty/" style="color:#999">使用Baidu前必读</a>
+            <a href="http://jianyi.baidu.com/" style="color:#999">意见反馈</a> 京ICP证030173号
+            <img alt="copy_right_24" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superplus/img/copy_rignt_24.png">
+			<a id="jgwab" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" style="color:#999; margin-left:15px">京公网安备11000002000001号</a>
+			<img src="http://p.ssl.qhmsg.com/t01d8eda6e551cf2615.png" width="14px" height="16px">
+        </div>
+    </div>
+    <!-- footer结束 -->
+</body>
+
+</html>
