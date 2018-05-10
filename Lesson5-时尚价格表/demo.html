@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>时尚价格表-学大前端</title>
+	<style>
+	body{
+		background:#c0bfbf;
+	}
+	.demo{
+		margin:0 auto;
+		padding: 1em 0;
+		width:292px;
+		height:527px;
+	}
+	.pricingTable{
+	    text-align: center;
+	}
+	.pricingTable .pricingTable-header{
+	    padding: 30px 0;
+	    background: #4d4d4d;
+	    position: relative;
+	    transition: all 0.3s ease 0s;
+	}
+	.pricingTable:hover .pricingTable-header{
+	    background: #09b2c6;
+	}
+	.pricingTable .pricingTable-header:before,
+	.pricingTable .pricingTable-header:after{
+	    content: "";
+	    width: 16px;
+	    height: 16px;
+	    border-radius: 50%;
+	    border: 1px solid #d9d9d8;
+	    position: absolute;
+	    bottom: 12px;
+	}
+	.pricingTable .pricingTable-header:before{
+	    left: 40px;
+	}
+	.pricingTable .pricingTable-header:after{
+	    right: 40px;
+	}
+	.pricingTable .heading{
+	    font-size: 20px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    letter-spacing: 2px;
+	    margin-top: 0;
+	}
+	.pricingTable .price-value{
+	    display: inline-block;
+	    position: relative;
+	    font-size: 55px;
+	    font-weight: bold;
+	    color: #09b1c5;
+	    transition: all 0.3s ease 0s;
+	}
+	.pricingTable:hover .price-value{
+	    color: #fff;
+	}
+	.pricingTable .currency{
+	    font-size: 30px;
+	    font-weight: bold;
+	    position: absolute;
+	    top: 6px;
+	    left: -19px;
+	}
+	.pricingTable .month{
+	    font-size: 16px;
+	    color: #fff;
+	    position: absolute;
+	    bottom: 15px;
+	    right: -30px;
+	    text-transform: uppercase;
+	}
+	.pricingTable .pricing-content{
+	    padding-top: 50px;
+	    background: #fff;
+	    position: relative;
+	}
+	.pricingTable .pricing-content:before,
+	.pricingTable .pricing-content:after{
+	    content: "";
+	    width: 16px;
+	    height: 16px;
+	    border-radius: 50%;
+	    border: 1px solid #7c7c7c;
+	    position: absolute;
+	    top: 12px;
+	}
+	.pricingTable .pricing-content:before{
+	    left: 40px;
+	}
+	.pricingTable .pricing-content:after{
+	    right: 40px;
+	}
+	.pricingTable .pricing-content ul{
+	    padding: 0 20px;
+	    margin: 0;
+	    list-style: none;
+	}
+	.pricingTable .pricing-content ul:before,
+	.pricingTable .pricing-content ul:after{
+	    content: "";
+	    width: 8px;
+	    height: 46px;
+	    border-radius: 3px;
+	    background: linear-gradient(to bottom,#818282 50%,#727373 50%);
+	    position: absolute;
+	    top: -22px;
+	    z-index: 1;
+	    box-shadow: 0 0 5px #707070;
+	    transition: all 0.3s ease 0s;
+	}
+	.pricingTable:hover .pricing-content ul:before,
+	.pricingTable:hover .pricing-content ul:after{
+	    background: linear-gradient(to bottom, #40c4db 50%, #34bacc 50%);
+	}
+	.pricingTable .pricing-content ul:before{
+	    left: 44px;
+	}
+	.pricingTable .pricing-content ul:after{
+	    right: 44px;
+	}
+	.pricingTable .pricing-content ul li{
+	    font-size: 15px;
+	    font-weight: bold;
+	    color: #777473;
+	    padding: 10px 0;
+	    border-bottom: 1px solid #d9d9d8;
+	}
+	.pricingTable .pricing-content ul li:last-child{
+	    border-bottom: none;
+	}
+	.pricingTable .read{
+	    display: inline-block;
+	    font-size: 16px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    background: #d9d9d8;
+	    padding: 8px 25px;
+	    margin: 30px 0;
+	    transition: all 0.3s ease 0s;
+	}
+	.pricingTable a{
+	    text-decoration: none;
+	}
+	.pricingTable .read:hover{
+	    text-decoration: none;
+	}
+	.pricingTable:hover .read{
+	    background: #09b1c5;
+	}
+	@media screen and (max-width: 990px){
+	    .pricingTable{ margin-bottom: 25px; }
+	}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="pricingTable">
+						<div class="pricingTable-header">
+							<h3 class="heading">云服务器 ECS</h3>
+							<span class="price-value">
+								<span class="currency">￥</span> 49
+								<span class="month">/月</span>
+							</span>
+						</div>
+						<div class="pricing-content">
+							<ul>
+								<li>Intel Xeon Platinum 8163</li>
+								<li>20GB SSD云盘</li>
+								<li>8GB DDR3内存</li>
+								<li>20Mbps 独立宽带</li>
+							</ul>
+							<a href="#" class="read">立即购买</a>
+						</div>
+					</div>
+				</div>	           
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
