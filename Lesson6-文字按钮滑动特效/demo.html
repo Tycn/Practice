@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字按钮滑动特效</title>
+<style>
+	html{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #0097A7;
+	}
+
+	h1 {
+		color: gold;
+		text-align: center;
+		position: relative;
+		padding-bottom: 50px;
+	}
+
+	p {
+		width: 400px;
+		height: 2.5em;
+		color: gold;
+		font-size: 24px;
+		border: 2px solid gold;
+		line-height: 2.5em;
+		text-align: center;
+		border-radius: 10px;
+		letter-spacing: 2px;
+		word-spacing: 2px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		position: relative;
+		overflow: hidden;
+	}
+
+	p span {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: 0.5s ease-out;
+	}
+
+	p .question {
+		left: 0;
+	}
+
+	p:hover .question {
+		left: 100%;
+	}
+
+	p .answer {
+		color: whitesmoke;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		background: rgba(0, 0, 0, 0.1);
+		left: -100%;
+	}
+
+	p:hover .answer {
+		left: 0;
+	}
+
+	.qr{
+		width: 400px;
+		height: 100px;
+		text-align: center;
+		margin-top: 80px;
+	}
+	.qr img{
+		display: inline-block;
+		width: 100px;
+		height: 100px;		
+	}
+	
+	.footer{
+		text-align: center;
+		margin-top: 200px;
+		font-size: 14px;
+		color: #fff;
+	}
+	.footer span a{
+		color: #fff;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<h1>学大前端公号了解下？</h1>
+		<p>
+			<span class="question">这个微信公号是干嘛的？</span>
+			<span class="answer">学习前端开发知识</span>
+		</p>
+		<p>
+			<span class="question">对前端知识我有什么帮助？</span>
+			<span class="answer">带你装逼，带你飞！</span>
+		</p>
+		<p>
+			<span class="question">微信公众号ID是多少?</span>
+			<span class="answer">xdqianduan</span>
+		</p>
+		
+	</div>
+	<div class="qr">
+		<img src="https://mmbiz.qpic.cn/mmbiz_jpg/aN15XkCQXKYWZljytZ1ricGvE6RicCcibVjq8TNibpzr6ibTL03L2vicWnrAiaDiaawBdzaDzDhcsHkhwdRGQ0fz23B9aQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1" />
+	</div>
+	<div class="footer">
+		<span>©学大前端微信公众号，每日一练<a href="https://github.com/Tycn/Practice"  target="_blank">demo</a></span>
+	</div>
+</body>
+</html>
