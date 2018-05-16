@@ -30,11 +30,6 @@ body {
   text-decoration: none;
 }
 
-.card:hover {
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-}
-
-
 /* thumb */
 .card__thumb {
   height: 245px;
