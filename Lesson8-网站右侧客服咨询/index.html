@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>网站侧栏在线客服咨询</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+	<div id="service">
+	<ul>
+		<li>
+			<a href="javascript:void(0)" class="weixin_area">
+				<img src="images/l02.png" width="47" height="49" class="shows" />
+				<img src="images/a.png" width="57" height="49" class="hides" />
+				<img src="images/weixin.jpg" width="145" class="weixin" style="display:none;margin:-100px 57px 0 0" />
+			</a>
+		</li>
+		<li>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1813028524&site=qq&menu=yes" target="_blank">
+				<div class="hides" style="width:161px;display:none;" id="qq">
+					<div class="hides" id="p1">
+						<img src="images/ll04.png">
+					</div>
+					<div class="hides" id="p2"><span style="color:#FFF;font-size:13px">1813028524</span>
+					</div>
+				</div>
+				<img src="images/l04.png" width="47" height="49" class="shows" />
+			</a>
+		</li>
+		<li id="tel">
+			<a href="javascript:void(0)">
+				<div class="hides" style="width:161px;display:none;" id="tels">
+					<div class="hides" id="p1">
+						<img src="images/ll05.png">
+					</div>
+					<div class="hides" id="p3"><span style="color:#FFF;font-size:12px">010-1000000</span>
+					</div>
+				</div>
+				<img src="images/l05.png" width="47" height="49" class="shows" />
+			</a>
+		</li>
+		<li id="btn">
+			<a id="top_btn">
+				<div class="hides" style="width:161px;display:none">
+					<img src="images/ll06.png" width="161" height="49" />
+				</div>
+				<img src="images/l06.png" width="47" height="49" class="shows" />
+			</a>
+		</li>
+	</ul>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#service a").hover(function() {
+			if ($(this).prop("className") == "weixin_area") {
+				$(this).children("img.hides").show();
+			} else {
+				$(this).children("div.hides").show();
+				$(this).children("img.shows").hide();
+				$(this).children("div.hides").animate({marginRight: '0px'}, '0');
+			}
+		}, function() {
+			if ($(this).prop("className") == "weixin_area") {
+				$(this).children("img.hides").hide();
+			} else {
+				$(this).children("div.hides").animate({marginRight: '-163px'}, 0, function() {
+					$(this).hide();
+					$(this).next("img.shows").show();
+				});
+			}
+		});
+
+		$("#top_btn").click(function() {
+			$("html,body").animate({scrollTop: 0}, 600);
+		});
+
+		//右侧导航 - 二维码
+		$(".weixin_area").hover(function() {
+			$(this).children(".weixin").show();
+		},function(){
+			$(this).children(".weixin").hide();
+		})
+	});
+</script>		
+</body>
+</html>
