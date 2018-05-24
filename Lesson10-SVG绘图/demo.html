@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG</title>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		background: #E6EAEB;
+		font-family: Arial, '微软雅黑', '宋体', sans-serif
+	}
+	.alert-box {
+		display: none;
+		position: relative;
+		margin: 96px auto 0;
+		padding: 180px 85px 22px;
+		border-radius: 10px 10px 0 0;
+		background: #FFF;
+		box-shadow: 5px 9px 17px rgba(102,102,102,0.75);
+		width: 286px;
+		color: #FFF;
+		text-align: center
+	}
+	.alert-box p {
+		margin: 0
+	}
+	.alert-circle {
+		position: absolute;
+		top: -50px;
+		left: 111px
+	}
+	.alert-sec-circle {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 735;
+		transition: stroke-dashoffset 1s linear
+	}
+	.alert-sec-text {
+		position: absolute;
+		top: 11px;
+		left: 190px;
+		width: 76px;
+		color: #000;
+		font-size: 68px
+	}
+	.alert-sec-unit {
+		font-size: 16px
+	}
+	.alert-body {
+		margin: 35px 0
+	}
+	.alert-head {
+		color: #242424;
+		font-size: 28px
+	}
+	.alert-concent {
+		margin: 25px 0 14px;
+		color: #7B7B7B;
+		font-size: 18px
+	}
+	.alert-concent p {
+		line-height: 27px
+	}
+	.alert-btn {
+		display: block;
+		border-radius: 10px;
+		background-color: #4AB0F7;
+		height: 55px;
+		line-height: 55px;
+		width: 286px;
+		color: #FFF;
+		font-size: 20px;
+		text-decoration: none;
+		letter-spacing: 2px
+	}
+	.alert-btn:hover {
+		background-color: #6BC2FF
+	}
+	.alert-footer {
+		margin: 0 auto;
+		height: 42px;
+		width: 160px
+	}
+	.alert-footer-icon {
+		float: left
+	}
+	.alert-footer-text {
+		float: left;
+		border-left: 2px solid #EEE;
+		padding: 3px 0 0 5px;
+		height: 40px;
+		color: #0B85CC;
+		font-size: 12px;
+		text-align: left
+	}
+	.alert-footer-text p {
+		color: #9E9E9E;
+		font-size: 16px;
+		line-height: 16px
+	}
+</style>
+</head>
+<body>
+	<div id="js-alert-box" class="alert-box"> 
+  		<svg class="alert-circle" width="234" height="234">
+	  		<circle cx="117" cy="117" r="108" fill="#FFF" stroke="#43AEFA" stroke-width="17"></circle>
+	  		<circle id="js-sec-circle" class="alert-sec-circle" cx="117" cy="117" r="108" fill="transparent" stroke="#F4F1F1" stroke-width="18" transform="rotate(-90 117 117)"></circle>
+	 		<text class="alert-sec-unit" x="78" y="172" fill="#BDBDBD">10秒倒计时</text>
+	  	</svg>
+	  	<div id="js-sec-text" class="alert-sec-text"></div>
+	  	<div class="alert-body">
+			<div id="js-alert-head" class="alert-head"></div>
+			<div class="alert-concent">
+		  		<p>关注国内前端开发技术微信公众号</p>
+		 		<p>您将获取大量免费学习资源</p>
+			</div>
+			<a id="js-alert-btn" class="alert-btn" href="http://www.51rgb.com/weixingz/xdqianduan/index.html">立即前往关注</a> 
+		</div>
+	  	<div class="alert-footer clearfix"> 
+			<svg width="46px" height="42px" class="alert-footer-icon">
+				<path fill="#9E9E9E" d="M34 28.161c0 1.422 0.813 2.653 2 3.256v0.498c-0.332 0.045-0.671 0.070-1.016 0.070-2.125 0-4.042-0.892-5.398-2.321-0.819 0.218-1.688 0.336-2.587 0.336-4.971 0-9-3.582-9-8s4.029-8 9-8c4.971 0 9 3.582 9 8 0 1.73-0.618 3.331-1.667 4.64-0.213 0.463-0.333 0.979-0.333 1.522zM16 0c8.702 0 15.781 5.644 15.995 12.672-1.537-0.685-3.237-1.047-4.995-1.047-2.986 0-5.807 1.045-7.942 2.943-2.214 1.968-3.433 4.607-3.433 7.432 0 1.396 0.298 2.747 0.867 3.993-0.163 0.004-0.327 0.007-0.492 0.007-0.849 0-1.682-0.054-2.495-0.158-3.437 3.437-7.539 4.053-11.505 4.144v-0.841c2.142-1.049 4-2.961 4-5.145 0-0.305-0.024-0.604-0.068-0.897-3.619-2.383-5.932-6.024-5.932-10.103 0-7.18 7.163-13 16-13z"></path>
+			</svg>
+			<div class="alert-footer-text">
+		  		<p>ID:xdqianduan</p>学大前端微信公号 
+		  	</div>
+	  </div>
+	</div>
+	<script>
+		function alertSet(e) {
+			document.getElementById("js-alert-box").style.display = "block",
+			document.getElementById("js-alert-head").innerHTML = e;
+			var t = 10,
+			n = document.getElementById("js-sec-circle");
+			document.getElementById("js-sec-text").innerHTML = t,
+			setInterval(function() {
+				if (0 == t){
+					location.href="http://www.51rgb.com/weixingz/xdqianduan/index.html";//#时间到后跳转地址：http://www.51rgb.com/weixingz/xdqianduan/index.html
+				}else {
+					t -= 1,
+					document.getElementById("js-sec-text").innerHTML = t;
+					var e = Math.round(t / 10 * 735);
+					n.style.strokeDashoffset = e - 735
+				}
+			},970);
+		}
+	</script>
+	<script>alertSet('即将前往关注页面');</script>
+</body>
+</html>
