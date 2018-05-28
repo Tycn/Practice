@@ -18,5 +18,6 @@
 10. Lesson10-SVG绘图：https://tycn.github.io/Practice/Lesson10-SVG%E7%BB%98%E5%9B%BE/demo.html
 11. Lesson11-weinh5：https://tycn.github.io/Practice/Lesson11-weinh5/index.html
 12. Lesson12-常规二级导航栏：https://tycn.github.io/Practice/Lesson12-%E5%B8%B8%E8%A7%84%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F/index.html
+13. Lesson13-头部幻灯片：https://tycn.github.io/Practice/Lesson13-%E5%A4%B4%E9%83%A8%E5%B9%BB%E7%81%AF%E7%89%87/index.html
 
    ​
